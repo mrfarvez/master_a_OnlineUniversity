@@ -69,24 +69,24 @@ public class Login extends JFrame implements ActionListener {
         if (e.getSource() == login){
 
       //next class
-//            String username = textFieldName.getText();
-//            String password = passwordField.getText();
-//
-//            String query = "select * fron login where username='"+username+"' and password = '"+password+"'";
-//            try {
-//                Conn c = new Conn();
-//                ResultSet resultSet = c.statement.executeQuery(query);
-//                if (resultSet.next()){
-//                    setVisible(false);
-//                    new main_class();
-//                }else {
-//                    JOptionPane.showMessageDialog(null,"Invalid username or password");
-//                }
-//
-//
-//            }catch (Exception E){
-//                E.printStackTrace();
-//            }
+            String username = textFieldName.getText();
+            String password = passwordField.getText();
+
+            String query = "select * from login where username='"+username+"' and password = '"+password+"'";
+            try {
+                Conn c = new Conn();
+                ResultSet resultSet = c.statement.executeQuery(query);
+                if (resultSet.next()){
+                    setVisible(false);
+                    new main_class();
+                }else {
+                    JOptionPane.showMessageDialog(null,"Invalid username or password");
+                }
+
+
+            }catch (Exception E){
+                E.printStackTrace();
+            }
 
         }else {
             setVisible(false);
