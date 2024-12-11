@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 
 public class main_class extends JFrame implements ActionListener {
     main_class(){
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icon/third.jpg"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icon/pfont.jpg"));
         Image i2 = i1.getImage().getScaledInstance(1540,750, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel img = new JLabel(i3);
@@ -131,6 +131,7 @@ public class main_class extends JFrame implements ActionListener {
         fee.add(feeForm);
 
         // utility
+
         JMenu utility = new JMenu("Utility");
         utility.setForeground(Color.BLACK);
 
@@ -192,7 +193,9 @@ public class main_class extends JFrame implements ActionListener {
             }catch (Exception E){
                 E.printStackTrace();
             }
-        } else if (sm.equals("New Faculty Information")) {
+        }
+
+        else if (sm.equals("New Faculty Information")) {
             new AddFaculty();
         }else if (sm.equals("New Student Information")){
             new AddStudent();
